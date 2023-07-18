@@ -1,0 +1,147 @@
+html {
+  box-sizing: border-box;
+  font-family: "Permanent Marker", cursive;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ffe44b;
+  margin: 10px auto;
+  text-align: center;
+  max-width: 1500px;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 10px auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 30px;
+  border: solid 2px rgb(43, 43, 43);
+  border-width: 4px 4px;
+}
+
+img {
+  border: solid 2px rgb(43, 43, 43);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+#game-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+#computer {
+  grid-column: 2;
+}
+
+#game-result, #buttons-container, #roll-count {
+  grid-column: span 2;
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+#game-result {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.winner-score {
+  background-color: green;
+  color: white;
+}
+
+.loser-score {
+  background-color: red;
+  color: white;
+}
+
+.disable-button {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+#user-score, #computer-score {
+  background-color: rgba(51, 51, 51, 0.3490196078);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.popup-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+.popup-content h3 {
+  text-align: center;
+}
+
+#close-button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+  #game-container {
+    all: unset;
+  }
+  img {
+    width: 75%;
+    max-width: 300px;
+  }
+  #game-result {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  #game-result, .popup-content {
+    font-size: 0.9rem;
+  }
+}
